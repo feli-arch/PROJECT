@@ -5,13 +5,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Home</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background: linear-gradient(to bottom, #a5f3fc, #fef9c3);
       font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
     }
 
     .navbar {
@@ -40,7 +48,11 @@
     }
 
     .hero {
-      height: 83vh;
+      min-height: 83vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 15px;
     }
 
     .text-main {
@@ -48,47 +60,83 @@
       text-shadow: 1px 1px 0 #000;
     }
 
-    .sponge-img {
-      width: 120px;
-      margin-bottom: 10px;
-    }
-
     img {
       border-radius: 16px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+
+      .hero {
+        text-align: center;
+      }
+
+      .col-md-6 {
+        margin-bottom: 30px;
+      }
+
+      .nav-link.active::after {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-warning" href="index.html">Sudoku</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg shadow-sm">
 
-      <div class="navbar-collapse justify-content-center">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold text-warning" href="index.html">
+        Sudoku
+      </a>
+
+      <!-- TOGGLE -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <!-- MENU -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
         <ul class="navbar-nav gap-3">
+
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="game.html">Game</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
+
         </ul>
+
       </div>
+
     </div>
+
   </nav>
 
-  <div class="container hero d-flex align-items-center">
-    <div class="row align-items-center w-100">
+  <!-- HERO -->
+  <div class="container hero">
+
+    <div class="row align-items-center justify-content-center w-100">
 
       <!-- TEXT -->
-      <div class="col-md-6 text-center text-md-start">
+      <div class="col-md-6 text-center">
 
         <h1 class="fw-bold">
           <span class="text-main">Sudoku</span> Game
@@ -102,17 +150,27 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 text-center">
+
         <img
           src="https://pixel.disco.nowtv.com/uuid/f38b04b5-2885-3c7c-8d52-20685c57dcb9/LAND_16_9/1536/864?language=en-GB&proposition=NOWOTT&version=36e2a908-9aea-3887-80ff-c76559ab9914&output-format=webp"
-          class="img-fluid shadow" style="max-width: 80%;" alt="Hero Image">
+          class="img-fluid shadow"
+          style="max-width: 80%;"
+          alt="Hero Image">
+
       </div>
 
     </div>
+
   </div>
 
+  <!-- FOOTER -->
   <footer class="text-center py-3 text-muted">
     © 2026 My Web
   </footer>
 
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
