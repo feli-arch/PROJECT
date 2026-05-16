@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
@@ -7,23 +9,47 @@
 
   <style>
     body {
-      background: linear-gradient(to bottom, #f8fafc, #eaf2ff);
+      background: linear-gradient(to bottom, #a5f3fc, #fef9c3);
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .text-main {
-      color: #2563eb;
+    .navbar {
+      background-color: #fff;
+      border-bottom: 3px solid #facc15;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      position: relative;
+      color: #333;
+    }
+
+    .nav-link:hover {
+      color: #facc15;
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #facc15;
+      left: 0;
+      bottom: -8px;
     }
 
     .hero {
-      min-height: 90vh;
+      height: 83vh;
     }
 
-    .btn {
-      transition: 0.3s;
+    .text-main {
+      color: #facc15;
+      text-shadow: 1px 1px 0 #000;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
+    .sponge-img {
+      width: 120px;
+      margin-bottom: 10px;
     }
 
     img {
@@ -34,32 +60,58 @@
 
 <body>
 
-<nav class="navbar bg-white shadow-sm">
-  <div class="container">
-    <span class="navbar-brand fw-semibold">My Web</span>
-    <a href="profile.html" class="btn btn-primary btn-sm">Profile</a>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="index.html">My Web</a>
 
-<div class="container hero d-flex align-items-center">
-  <div class="row align-items-center">
-
-    <div class="col-md-6">
-      <h1 class="fw-bold">
-        My <span class="text-main">Website</span>
-      </h1>
-      <p class="text-muted">
-        Project HTML, Bootstrap, dan JavaScript
-      </p>
-      <a href="profile.html" class="btn btn-primary mt-2 px-4">Mulai</a>
+      <div class="navbar-collapse justify-content-center">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="game.html">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="col-md-6 text-center">
-      <img src="https://pixel.disco.nowtv.com/uuid/f38b04b5-2885-3c7c-8d52-20685c57dcb9/LAND_16_9/1536/864?language=en-GB&proposition=NOWOTT&version=36e2a908-9aea-3887-80ff-c76559ab9914&output-format=webp" class="img-fluid shadow">
+  <div class="container hero d-flex align-items-center">
+    <div class="row align-items-center w-100">
+
+      <!-- TEXT -->
+      <div class="col-md-6 text-center text-md-start">
+
+        <h1 class="fw-bold">
+          My <span class="text-main">Website</span>
+        </h1>
+
+        <p class="text-muted">
+          Project HTML, Bootstrap, dan JavaScript
+        </p>
+
+      </div>
+
+      <!-- IMAGE -->
+      <div class="col-md-6 text-center">
+        <img
+          src="https://pixel.disco.nowtv.com/uuid/f38b04b5-2885-3c7c-8d52-20685c57dcb9/LAND_16_9/1536/864?language=en-GB&proposition=NOWOTT&version=36e2a908-9aea-3887-80ff-c76559ab9914&output-format=webp"
+          class="img-fluid shadow" style="max-width: 80%;" alt="Hero Image">
+      </div>
+
     </div>
-
   </div>
-</div>
+
+  <footer class="text-center py-3 text-muted">
+    © 2026 My Web
+  </footer>
 
 </body>
 </html>

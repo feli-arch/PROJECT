@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Profile</title>
@@ -7,128 +9,131 @@
 
   <style>
     body {
-      background: linear-gradient(to bottom, #f8fafc, #eaf2ff);
+      background: linear-gradient(to bottom, #a5f3fc, #fef9c3);
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+    }
+
+    .navbar {
+      background-color: #fff;
+      border-bottom: 3px solid #facc15;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      position: relative;
+      color: #333;
+    }
+
+    .nav-link:hover {
+      color: #facc15;
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #facc15;
+      left: 0;
+      bottom: -8px;
     }
 
     .card-custom {
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       border: none;
+      background: white;
     }
 
     .banner {
+      margin-top: 10px;
       border-radius: 16px;
       height: 150px;
       object-fit: cover;
       width: 100%;
     }
 
+    .title {
+      color: #facc15;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+    .sponge-img {
+      display: block;
+      margin: auto;
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
     .btn {
       transition: 0.3s;
+      border-radius: 10px;
     }
 
     .btn:hover {
       transform: scale(1.05);
     }
   </style>
+
 </head>
 
 <body>
 
-<nav class="navbar bg-white shadow-sm">
-  <div class="container">
-    <a href="index.html" class="btn btn-outline-secondary btn-sm">Back</a>
-    <span class="navbar-brand fw-semibold">Profile</span>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+    <nav class="navbar navbar-expand shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">
+                My Web
+            </a>
 
-<div class="container mt-4" style="max-width:600px;">
+            <div class="navbar-collapse justify-content-center">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
 
-  <!-- Banner -->
-  <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/5aa3b7cf-1707-4fa2-b2ca-faaf5d712203.__CR0,0,2021,625_PT0_SX970_V1___.jpg" class="banner mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profile.html">Profile</a>
+                    </li>
 
-  <!-- Profile -->
-  <div class="card card-custom p-4 text-center mb-4"
-  <!-- FOTO SPONGEBOB -->
-    <img src="https://static.wikia.nocookie.net/cartoons/images/e/ed/Profile_-_SpongeBob_SquarePants.png/revision/latest?cb=20240420115914"
-         class="rounded-circle mx-auto mb-3"
-         width="50">
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html">Game</a>
+                    </li>
 
-    <h5 class="mb-1">Felicia</h5>
-    <p class="text-muted small">XI-B/10</p>
-  </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- SUDOKU -->
-  <div class="card card-custom p-4 text-center">
-    <h6 class="mb-3 text-primary">Mini Sudoku 🧩</h6>
-    <p class="small text-muted">Isi angka 1 - 4</p>
+  <div class="container center-page" style="max-width:600px;">
 
-    <div class="d-grid gap-2" style="grid-template-columns: repeat(4, 60px); justify-content:center;">
-      <input maxlength="1" class="form-control text-center" id="c0">
-      <input maxlength="1" class="form-control text-center" id="c1">
-      <input maxlength="1" class="form-control text-center" id="c2" value="3">
-      <input maxlength="1" class="form-control text-center" id="c3">
+    <!-- Banner -->
+    <img
+      src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/5aa3b7cf-1707-4fa2-b2ca-faaf5d712203.__CR0,0,2021,625_PT0_SX970_V1___.jpg"
+      class="banner mb-3" alt="Banner">
 
-      <input maxlength="1" class="form-control text-center" id="c4" value="3">
-      <input maxlength="1" class="form-control text-center" id="c5">
-      <input maxlength="1" class="form-control text-center" id="c6">
-      <input maxlength="1" class="form-control text-center" id="c7">
+    <!-- Profile Card -->
+    <div class="card card-custom p-4 text-center">
 
-      <input maxlength="1" class="form-control text-center" id="c8">
-      <input maxlength="1" class="form-control text-center" id="c9">
-      <input maxlength="1" class="form-control text-center" id="c10">
-      <input maxlength="1" class="form-control text-center" id="c11" value="2">
+      <img src="https://static.wikia.nocookie.net/660cd991-3bf9-4a90-a3c6-836ac47ed8eb/scale-to-width/755"
+        class="sponge-img" alt="SpongeBob">
 
-      <input maxlength="1" class="form-control text-center" id="c12">
-      <input maxlength="1" class="form-control text-center" id="c13" value="1">
-      <input maxlength="1" class="form-control text-center" id="c14">
-      <input maxlength="1" class="form-control text-center" id="c15">
+      <h5 class="mb-1 title">Felicia</h5>
+      <p class="text-muted small">XI-B / 10</p>
+
     </div>
 
-    <button class="btn btn-primary mt-3" onclick="cekSudoku()">Cek Jawaban</button>
-
-    <p id="hasilSudoku" class="mt-3 small"></p>
   </div>
 
-</div>
-
-<script>
-function cekSudoku() {
-  let grid = [];
-
-  for (let i = 0; i < 16; i++) {
-    let val = document.getElementById("c"+i).value;
-    grid.push(val);
-  }
-
-  function valid(arr) {
-    let s = new Set(arr);
-    return s.size === 4 && !arr.includes("");
-  }
-
-  let hasil = document.getElementById("hasilSudoku");
-
-  for (let i = 0; i < 4; i++) {
-    if (!valid(grid.slice(i*4, i*4+4))) {
-      hasil.innerHTML = "❌ Masih salah";
-      hasil.style.color = "red";
-      return;
-    }
-  }
-
-  for (let i = 0; i < 4; i++) {
-    let col = [grid[i], grid[i+4], grid[i+8], grid[i+12]];
-    if (!valid(col)) {
-      hasil.innerHTML = "❌ Masih salah";
-      hasil.style.color = "red";
-      return;
-    }
-  }
-
-  hasil.innerHTML = "🎉 Benar!";
-  hasil.style.color = "green";
-}
-</script>
+  <footer class="text-center py-3 text-muted">
+    © 2026 My Web
+  </footer>
 
 </body>
+
 </html>
