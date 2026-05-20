@@ -66,6 +66,56 @@
       height: auto;
     }
 
+    /* FEATURE */
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-icon {
+      font-size: 40px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* DECORATION */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    .circle1 {
+      width: 180px;
+      height: 180px;
+      background: #facc15;
+      top: 120px;
+      left: -50px;
+    }
+
+    .circle2 {
+      width: 220px;
+      height: 220px;
+      background: #38bdf8;
+      bottom: 80px;
+      right: -70px;
+    }
+
     @media (max-width: 768px) {
 
       .hero {
@@ -84,6 +134,10 @@
 </head>
 
 <body>
+
+  <!-- DECORATION -->
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg shadow-sm">
@@ -146,6 +200,10 @@
           Project HTML, Bootstrap, dan JavaScript
         </p>
 
+        <button class="btn btn-warning rounded-pill px-4 mt-3 shadow">
+          ✨ Play Now ✨
+        </button>
+
       </div>
 
       <!-- IMAGE -->
@@ -162,6 +220,104 @@
     </div>
 
   </div>
+
+  <!-- FEATURES -->
+  <section class="container py-5">
+
+    <h2 class="text-center fw-bold mb-5">
+      ✨ Website Features ✨
+    </h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+
+        <div class="feature-card text-center">
+
+          <div class="feature-icon">
+            🎮
+          </div>
+
+          <h5 class="fw-bold mt-3">
+            Sudoku Game
+          </h5>
+
+          <p class="text-muted">
+            Play fun and challenging Sudoku games directly on the website.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="feature-card text-center">
+
+          <div class="feature-icon">
+            👤
+          </div>
+
+          <h5 class="fw-bold mt-3">
+            Profile Page
+          </h5>
+
+          <p class="text-muted">
+            Display personal profile information with a modern design.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="feature-card text-center">
+
+          <div class="feature-icon">
+            📱
+          </div>
+
+          <h5 class="fw-bold mt-3">
+            Responsive Design
+          </h5>
+
+          <p class="text-muted">
+            The website works well on desktop, tablet, and mobile devices.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container pb-5">
+
+    <div class="contact-box text-center">
+
+      <h2 class="fw-bold mb-3">
+        📬 Contact Me
+      </h2>
+
+      <p class="text-muted">
+        Feel free to contact me through social media or email ✨
+      </p>
+
+      <h5>
+        📧 felicia@gmail.com
+      </h5>
+
+      <h5>
+        📱 @felicia.swd
+      </h5>
+
+    </div>
+
+  </section>
 
   <!-- FOOTER -->
   <footer class="text-center py-3 text-muted">
