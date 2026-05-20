@@ -94,6 +94,8 @@
       display: block;
       margin: auto;
       margin-bottom: 15px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     footer {
@@ -199,15 +201,21 @@
         <img
           src="https://static.wikia.nocookie.net/660cd991-3bf9-4a90-a3c6-836ac47ed8eb/scale-to-width/755"
           class="profile-img"
+          id="profileImage"
           alt="Profile">
 
-        <h4 class="title mb-2">
+        <h4 class="title mb-2" id="nameText">
           Felicia
         </h4>
 
         <p class="text-muted">
           XI-B / 10
         </p>
+
+        <!-- BUTTON -->
+        <button class="btn btn-warning mt-3" onclick="showMessage()">
+          Klik Aku
+        </button>
 
       </div>
 
@@ -222,6 +230,34 @@
 
   <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // Alert saat tombol diklik
+    function showMessage() {
+      alert("Halo! Selamat datang di profile Felicia ✨");
+    }
+
+    // Efek zoom foto profile saat diklik
+    const profileImage = document.getElementById("profileImage");
+
+    profileImage.addEventListener("click", function () {
+
+      if (profileImage.style.transform === "scale(1.3)") {
+        profileImage.style.transform = "scale(1)";
+      } else {
+        profileImage.style.transform = "scale(1.3)";
+      }
+
+    });
+
+    // Mengubah nama saat halaman dibuka
+    window.onload = function () {
+      document.getElementById("nameText").innerHTML = "Felicia Suwondo";
+    };
+
+  </script>
 
 </body>
 
